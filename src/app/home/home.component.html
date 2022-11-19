@@ -1,0 +1,52 @@
+<!-- home
+<app-create-project [item]="data"></app-create-project> -->
+
+<table mat-table [dataSource]="data" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>id</th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef> title </th>
+      <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> description </th>
+      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="technology">
+      <th mat-header-cell *matHeaderCellDef> technology </th>
+      <td mat-cell *matCellDef="let element"> {{element.technology}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="specialization">
+      <th mat-header-cell *matHeaderCellDef> specialization </th>
+      <td mat-cell *matCellDef="let element"> {{element.specialization}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="owners">
+      <th mat-header-cell *matHeaderCellDef> owners </th>
+      <td mat-cell *matCellDef="let element">
+        <div>
+          <span *ngFor="let owner of element.owners">
+            {{owner}},
+          </span>
+      </div>
+    </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  

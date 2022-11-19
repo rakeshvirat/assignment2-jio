@@ -1,0 +1,33 @@
+<div>
+    <input class="search" type="number" (change)="change($event)" placeholder="search by id">
+</div>
+<div style="display:flex;justify-content:center;height:100vh">
+    <form #myform = "ngForm" class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Title</mat-label>
+          <input matInput placeholder="title" name="title" value="{{data.title}}" disabled/>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>description</mat-label>
+            <input matInput placeholder="description" name="description" value="{{data.description}}" disabled/>
+          </mat-form-field>
+    
+          <mat-form-field class="example-full-width">
+            <mat-label>technology</mat-label>
+            <input matInput placeholder="technology" name="technology" value="{{data.technology}}" disabled/>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>specialization</mat-label>
+            <input matInput placeholder="specialization" name="specialization" value="{{data.specialization}}" disabled/>
+          </mat-form-field>
+    
+          <div style="display:flex;flex-wrap:wrap;gap:5px;padding-left:3px;margin-bottom:5px">
+          <div *ngFor="let owner of data.owners;index as i">
+            <span style="display:block;background:grey;color:white;padding:5px;cursor:pointer">
+                {{owner}}
+            </span>
+          </div>
+          </div>
+    </form>
+</div>

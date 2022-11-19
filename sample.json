@@ -1,0 +1,36 @@
+{
+  "projects": [
+    {
+      "title": "project1",
+      "description": "this is project1",
+      "technology": "Angular",
+      "specialization": "BE",
+      "owners": [
+        "rakesh",
+        "mukesh"
+      ],
+      "id": 1
+    },
+    {
+      "title": "project2",
+      "description": "this is project2",
+      "technology": "java",
+      "specialization": "BE",
+      "owners": [
+        "rakesh",
+        "mukesh"
+      ],
+      "id": 2
+    },
+    {
+      "title": "project3",
+      "description": "this is project3",
+      "technology": "python",
+      "specialization": "FE",
+      "owners": [
+        "kiran"
+      ],
+      "id": 3
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+<!-- <p>create-project works!{{item}}</p>
+<form #myform = "ngForm" (ngSubmit)="create(myform)">
+    <div>
+      <input name='Description' id='area' type='text' placeholder="Enter the Description" ngModel/>
+    </div>
+
+    <div style="display:flex;justify-content:center;align-items:center">
+      <button mat-raised-button style='padding:4px;background:blue;color:white;margin:5px auto;text-align:center;border:none;' type='submit'>update</button>
+    </div>
+</form> -->
+<div style="display:flex;justify-content:center;height:100vh">
+    <form #myform = "ngForm" class="example-form" (ngSubmit)="create(myform)">
+        <mat-form-field class="example-full-width">
+          <mat-label>Title</mat-label>
+          <input matInput placeholder="title" name="title" ngModel/>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>description</mat-label>
+            <input matInput placeholder="description" name="description" ngModel/>
+          </mat-form-field>
+    
+          <mat-form-field class="example-full-width">
+            <mat-label>technology</mat-label>
+            <input matInput placeholder="technology" name="technology" ngModel/>
+          </mat-form-field>
+        
+          <select name="specialization" class="example-full-width" style="padding:6px;border:none;border-bottom:1px solid grey;color:grey;margin:8px" ngModel>
+            <option value="">Select Specialization</option>
+            <option value="BE">BE</option>
+            <option value="FE">FE</option>
+          </select>
+    
+          <mat-form-field style="position:relative;" class="example-full-width">
+            <mat-label>owners</mat-label>
+            <input matInput placeholder="owners" id="owner" name="owners">
+            <i (click)="AddingOwners($event)" style="background:aqua;padding:5px;border-radius:50%;cursor:pointer;position:absolute;right:0;top:-2px" class="fa-solid fa-plus"></i>
+          </mat-form-field>
+          <div style="display:flex;flex-wrap:wrap;gap:5px;padding-left:3px;margin-bottom:5px">
+          <div *ngFor="let owner of owners;index as i">
+            <span (click)="deletion(i)" style="display:block;background:grey;color:white;padding:5px;cursor:pointer">
+                {{owner}}
+            </span>
+          </div>
+          </div>
+          <button *ngIf="owners.length>0"  mat-raised-button style='padding:4px;background:blue;color:white;margin-left:130px;text-align:center;border:none;' type='submit'>Save</button>
+    </form>
+    <!-- <input [value]="username" (input)="username = $event.target.value"> -->
+</div>

@@ -1,0 +1,28 @@
+.create{
+    height:250px;
+    width:250px;
+    padding:30px;
+    border:4px solid rgba(128, 128, 128, 0.5);
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:6px;
+    flex-direction:column;
+}
+
+.create:hover{
+    border:4px solid rgb(128, 128, 128);
+}
+
+h3{
+    font-size:20px;
+    font-weight:600;
+    display:block;
+}
+
+i{
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}

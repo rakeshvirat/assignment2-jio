@@ -1,0 +1,23 @@
+.example-form {
+    min-width: 150px;
+    max-width: 300px;
+    width: 100%;
+  }
+  
+.example-full-width{
+    width: 100%;
+    padding: 6px;
+    margin-left: 5px;
+}
+
+.search{
+    padding:5px;
+    border:2px solid grey;
+    outline:0;
+}
+
+.search:focus{
+    border:2px solid green;
+    
+}
+  
